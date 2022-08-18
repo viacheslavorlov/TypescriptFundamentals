@@ -24,7 +24,7 @@ let variable: any = 42;
 variable = 'new string'; //? может менять тип данных
 variable = [1, 2, 4];  //? может менять тип данных
 
-//todo =====================
+//* ===================== *//
 
 function sayMyName(name: string): void {
     console.log(name);
@@ -42,3 +42,19 @@ function infinite(): never {
         console.log('infinite!');
     }
 }
+
+// * Type
+type Login = string;
+
+const login: Login = 'admin';
+// const login2: Login = 42; нельзя присвоить другой тип данных для Login
+
+type ID = string | number;
+const id1: ID = 1234;
+const id2: ID = 'admin';
+// const id3: ID = true; снова не сработает (number or string);
+
+
+//* null undefined
+
+type someType = null | string | undefined;
