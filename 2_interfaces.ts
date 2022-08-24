@@ -1,4 +1,4 @@
-interface Rect {
+ interface Rect {
     readonly id: string
     color?: string
     size: {
